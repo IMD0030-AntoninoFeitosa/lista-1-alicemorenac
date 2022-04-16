@@ -2,8 +2,28 @@
 
 std::vector<unsigned int> fib_below_n( unsigned int n )
 {
-    // TODO: adicione o seu código aqui.
+    vector<unsigned int> v;
 
-    // TODO: Isto é apenas um STUB. Troque o retorno pelo que você julgar correto.
-    return std::vector<unsigned int>{};
+    unsigned int number;
+    int index = 0;
+    bool fibBelowN = true;
+
+    while (fibBelowN)
+    {
+        if (index == 0 || index == 1)
+        {
+            if (n > 1) v.push_back(1);
+            else return v;
+        }
+        else
+        {
+            number = v[index - 1] + v[index - 2];
+            if (number < n) v.push_back(number);
+            else fibBelowN = false;
+        }
+        index++;
+    }
+
+    return v;
+
 }
