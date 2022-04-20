@@ -1,31 +1,19 @@
 #include <iostream>
-#include <array>
 using std::cin;
 using std::cout;
 
-const int SIZE = 5; // input size.
+const int SIZE = 5;
 
 int main(void)
 {
-	std::array <int, SIZE> num {};
-	int Neg = 0;
-
-
-	for (int i = 0; i < SIZE; i++)
-	{
-		std::cin >> num[i];
-
-		if (num[i] < 0)
-		{
-			Neg = Neg++;
-		}
-	}
-
-	std::cout << Neg << std::endl;
-
-	system("PAUSE");
-
-	return 0;
+  int value, count = 0;
+  for(int i=0;i<SIZE;i++){
+    cin >> std::ws >> value;
+    if(value < 0){
+      count++;
+    }
+  }
+  cout << count;
+  return 0;
 }
-
 
