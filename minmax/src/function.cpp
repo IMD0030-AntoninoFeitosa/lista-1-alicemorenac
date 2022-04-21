@@ -1,32 +1,17 @@
 #include "function.h"
 
 
-std::pair<int, int> min_max(int V[], size_t n)
+std::pair<int,int> min_max( int V[], std::size_t n )
 {
-	int min = V[0];
-	int max = V[0];
-
-	int min_indice = 0;
-	int max_indice = 0;
-		
-	if (n == 0)
-	{
-		return  std::make_pair(-1, -1);
-	}
-	
-	for (int i = 0; i < n; i++)
-	{
-		if(V[i] < min)
-		{
-			min = V[i];
-			min_indice = i;
-		}
-		if (V[i] >= max)
-		{
-			max = V[i];
-			max_indice = i;
-		}
-	}
-
-	return std::make_pair(min_indice, max_indice);
+  int indice_min = -1;
+  int indice_max = -1;
+  for(int i=0;i<n;i++){
+    if(indice_min == -1 || V[i] < V[indice_min]){
+      indice_min = i;
+    }
+    if(indice_max == -1 || V[i] >= V[indice_max]){
+      indice_max = i;
+    }
+  }
+  return std::make_pair(indice_min, indice_max);
 }

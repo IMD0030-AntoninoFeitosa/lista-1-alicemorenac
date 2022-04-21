@@ -1,4 +1,4 @@
-/#include <iostream>
+#include <iostream>
 #include <cstdlib>
 using std::cout;
 using std::cin;
@@ -11,8 +11,8 @@ int main( void )
 	int m = 0;
 	int soma = 0;
 
-	std::cin >> m;
-	std::cin >> n;
+	cin >> m;
+	cin >> n;
 
 
 	if (n == 0)
@@ -30,7 +30,7 @@ int main( void )
 			soma = soma + i;
 	}
 
-	std::cout << soma << std::endl;
+	cout << soma << endl;
 
 	return 0;
 }
